@@ -1,0 +1,20 @@
+language: cpp
+
+matrix:
+  include:
+    # macOS Sierra
+    - os: osx
+      osx_image: xcode9.2
+    # macOS High Sierra
+    - os: osx
+      osx_image: xcode10.1
+    # macOS Mojave
+    - os: osx
+      osx_image: xcode10.2
+
+script:
+  - clang++ -std=c++17 -I./include examples/basic.cpp -o basic && ./basic
+
+notifications:
+  email: false
+
