@@ -13,11 +13,14 @@ matrix:
       osx_image: xcode10.2
 
 script:
-  - clang++ -std=c++14 -I./include examples/basic.cpp -o basic14 && ./basic14;
+  - clang++ -std=c++14 -I./include examples/basic.cpp -o basic14 && ./basic14
+  - clang++ -std=c++14 -I./include examples/constant.cpp -o constant14 && ./constant14
   - if [[ "$TRAVIS_OSX_IMAGE" == "xcode9.2" ]]; then
       clang++ -std=c++1z -I./include examples/basic.cpp -o basic17 && ./basic17;
+      clang++ -std=c++1z -I./include examples/constant.cpp -o constant17 && ./constant17;
     else
       clang++ -std=c++17 -I./include examples/basic.cpp -o basic17 && ./basic17;
+      clang++ -std=c++17 -I./include examples/constant.cpp -o constant17 && ./constant17;
     fi
 
 notifications:
