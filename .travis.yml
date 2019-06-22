@@ -13,7 +13,11 @@ matrix:
       osx_image: xcode10.2
 
 script:
-  - clang++ -std=c++17 -I./include examples/basic.cpp -o basic && ./basic
+  - if [[ "$TRAVIS_OSX_IMAGE" == "xcode9.2" ]]; then
+      clang++ -std=c++1z -I./include examples/basic.cpp -o basic && ./basic;
+    else
+      clang++ -std=c++17 -I./include examples/basic.cpp -o basic && ./basic;
+    fi
 
 notifications:
   email: false
