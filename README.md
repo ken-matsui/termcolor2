@@ -8,7 +8,7 @@ Support not less than C++14.
 To install `termcolor2`, add it to the dependency list of `poac.yml`:
 
 ```yaml
-deps:
+dependencies:
   termcolor2: ">=0.1.0 and <1.0.0"
 ```
 
