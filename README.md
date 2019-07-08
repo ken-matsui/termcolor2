@@ -189,7 +189,11 @@ The manipulators are divided into four groups:
 ### Attribute manipulators
 
 1. `termcolor2::bold`
+1. `termcolor::dark`
 1. `termcolor2::underline`
+1. `termcolor::blink`
+1. `termcolor::reverse`
+1. `termcolor::concealed`
 
 
 ### Control manipulators
