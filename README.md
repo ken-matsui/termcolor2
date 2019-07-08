@@ -166,13 +166,12 @@ The manipulators are divided into four groups:
 
 1. `termcolor2::grey`
 1. `termcolor2::red`
-1. `termcolor2::pink`
 1. `termcolor2::green`
 1. `termcolor2::yellow`
 1. `termcolor2::blue`
-<!-- 1. termcolor2::magenta 
-1. termcolor2::cyan
-1. termcolor2::white -->
+1. `termcolor2::magenta`
+1. `termcolor2::cyan`
+1. `termcolor2::white`
 
 
 ### Background manipulators
@@ -189,3 +188,4 @@ Comming soon...
 ### Control manipulators
 
 Comming soon...
+
