@@ -176,7 +176,14 @@ The manipulators are divided into four groups:
 
 ### Background manipulators
 
-Comming soon...
+1. `termcolor::on_grey`
+1. `termcolor::on_red`
+1. `termcolor::on_green`
+1. `termcolor::on_yellow`
+1. `termcolor::on_blue`
+1. `termcolor::on_magenta`
+1. `termcolor::on_cyan`
+1. `termcolor::on_white`
 
 
 ### Attribute manipulators
