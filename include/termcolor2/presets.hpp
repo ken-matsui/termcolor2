@@ -1,7 +1,7 @@
 #ifndef TERMCOLOR2_PRESETS_HPP
 #define TERMCOLOR2_PRESETS_HPP
 
-#include <poac/util/termcolor2/string.hpp>
+#include <termcolor2/string.hpp>
 
 namespace termcolor2 {
     //

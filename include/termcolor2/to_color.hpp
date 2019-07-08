@@ -4,8 +4,8 @@
 #include <cstddef> // std::size_t
 #include <string> // std::basic_string
 
-#include <poac/util/termcolor2/presets.hpp>
-#include <poac/util/termcolor2/string.hpp>
+#include <termcolor2/presets.hpp>
+#include <termcolor2/string.hpp>
 
 namespace termcolor2 {
     //
