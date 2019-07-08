@@ -9,7 +9,7 @@ To install `termcolor2`, add it to the dependency list of `poac.yml`:
 
 ```yaml
 dependencies:
-  termcolor2: ">=0.1.0 and <1.0.0"
+  matken11235/termcolor2: ">=0.1.0 and <1.0.0"
 ```
 
 After that, execute `poac install` command to install `termcolor2`.
