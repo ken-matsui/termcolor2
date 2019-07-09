@@ -17,7 +17,7 @@ After that, execute `poac install` command to install `termcolor2`.
 
 ## How to use?
 
-It's very easy to use. The idea is based on the use of C++ stream manipulators. The typical `Hello World` application is below:
+It's very easy to use. The typical `Hello World` application is below:
 
 ```cpp
 #include <iostream>
