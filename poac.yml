@@ -1,9 +1,2 @@
-name: termcolor2
-version: 0.1.0
 cpp_version: 14
-description: "**TODO: Add description**"
-owners:
-  - "Your ID"
-build:
-  system: poac
-  lib: true
+
