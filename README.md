@@ -176,24 +176,24 @@ The manipulators are divided into four groups:
 
 ### Background manipulators
 
-1. `termcolor::on_grey`
-1. `termcolor::on_red`
-1. `termcolor::on_green`
-1. `termcolor::on_yellow`
-1. `termcolor::on_blue`
-1. `termcolor::on_magenta`
-1. `termcolor::on_cyan`
-1. `termcolor::on_white`
+1. `termcolor2::on_grey`
+1. `termcolor2::on_red`
+1. `termcolor2::on_green`
+1. `termcolor2::on_yellow`
+1. `termcolor2::on_blue`
+1. `termcolor2::on_magenta`
+1. `termcolor2::on_cyan`
+1. `termcolor2::on_white`
 
 
 ### Attribute manipulators
 
 1. `termcolor2::bold`
-1. `termcolor::dark`
+1. `termcolor2::dark`
 1. `termcolor2::underline`
-1. `termcolor::blink`
-1. `termcolor::reverse`
-1. `termcolor::concealed`
+1. `termcolor2::blink`
+1. `termcolor2::reverse`
+1. `termcolor2::concealed`
 
 
 ### Control manipulators
