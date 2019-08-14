@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: basic example (C++14)
+      run: g++ -std=c++14 -I./include examples/basic.cpp -o basic14 && ./basic14
+    - name: basic example (C++17)
+      run: g++ -std=c++1z -I./include examples/basic.cpp -o basic17 && ./basic17
+    - name: constant expression example (C++14)
+      run: g++ -std=c++14 -I./include examples/constant.cpp -o constant14 && ./constant14
+    - name: constant expression example (C++17)
+      run: g++ -std=c++1z -I./include examples/constant.cpp -o constant17 && ./constant17;
