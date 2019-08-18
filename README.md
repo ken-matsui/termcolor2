@@ -122,8 +122,7 @@ int main() {
 }
 ```
 
-**I use GNU extensions.
-Please note that it is not a standard.**
+**Please note that using GNU extensions is not standard.**
 
 In MSVC, as described [here](https://developercommunity.visualstudio.com/content/problem/5635/the-flowing-code-used-to-compile-in-vs15-but-not-i.html), user-defined string literal operator templates is not implemented, so defining TERMCOLOR2_USE_GNU_STRING_LITERAL_OPERATOR_TEMPLATE is ignored.
 
