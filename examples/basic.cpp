@@ -3,8 +3,8 @@
 
 int main() {
     std::cout
-        << termcolor2::yellow<> << "Warm welcome to "
-        << termcolor2::blue<> << termcolor2::underline<> << "TERMCOLOR"
-        << termcolor2::reset<> << std::endl;
+        << termcolor2::yellow << "Warm welcome to "
+        << termcolor2::blue << termcolor2::underline << "TERMCOLOR"
+        << termcolor2::reset << std::endl;
 }
 
