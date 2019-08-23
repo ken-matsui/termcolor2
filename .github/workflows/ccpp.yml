@@ -3,14 +3,14 @@ name: C/C++ CI
 on: [push, pull_request]
 
 jobs:
-  build-on-ubuntu-18.04:
+  build-on-ubuntu-18_04:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
     - name: basic example (C++14)
       run: |
         g++ -std=c++14 -I./include examples/basic.cpp -o basic14
-        && ./basic14
+        ./basic14
     - name: basic example (C++17)
       run: |
         g++ -std=c++17 -I./include examples/basic.cpp -o basic17
@@ -24,7 +24,7 @@ jobs:
         g++ -std=c++17 -I./include examples/constant.cpp -o constant17
         ./constant17
         
-  build-on-macOS-10.14:
+  build-on-macOS-10_14:
     runs-on: macOS-10.14
     steps:
     - uses: actions/checkout@master
