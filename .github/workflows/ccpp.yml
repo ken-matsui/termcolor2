@@ -30,19 +30,25 @@ jobs:
     - uses: actions/checkout@master
     - name: basic example (C++14)
       run: >
-        /Applications/Xcode_10.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+        /Applications/Xcode_10.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
         -isysroot /Applications/Xcode_10.3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk
         -std=c++14 -I./include examples/basic.cpp -o basic14
         && ./basic14
     - name: basic example (C++17)
-      run: |
-        g++ -std=c++17 -I./include examples/basic.cpp -o basic17
-        ./basic17
+      run: >
+        /Applications/Xcode_10.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+        -isysroot /Applications/Xcode_10.3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk
+        -std=c++17 -I./include examples/basic.cpp -o basic17
+        && ./basic17
     - name: constant expression example (C++14)
-      run: |
-        g++ -std=c++14 -I./include examples/constant.cpp -o constant14
-        ./constant14
+      run: >
+        /Applications/Xcode_10.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+        -isysroot /Applications/Xcode_10.3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk
+        -std=c++14 -I./include examples/constant.cpp -o constant14
+        && ./constant14
     - name: constant expression example (C++17)
-      run: |
-        g++ -std=c++17 -I./include examples/constant.cpp -o constant17
-        ./constant17
+      run: >
+        /Applications/Xcode_10.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+        -isysroot /Applications/Xcode_10.3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk
+        -std=c++17 -I./include examples/constant.cpp -o constant17
+        && ./constant17
