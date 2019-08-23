@@ -28,6 +28,8 @@ jobs:
     runs-on: macOS-10.14
     steps:
     - uses: actions/checkout@master
+    - name: ls
+      run: ls -a /Applications/Xcode_10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/
     - name: basic example (C++14)
       run: >
         /Applications/Xcode_10.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
