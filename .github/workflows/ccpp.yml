@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     
-    - name: Install Boost (only macOS)
+    - name: Install Boost
       run: brew install boost
 
     - name: basic example (C++11)
@@ -43,16 +43,4 @@ jobs:
         cd build
         cmake -Dtermcolor2_BUILD_TEST=ON ..
         make
-        ctest --output-on-failure --verbose
-        
-  build-on-windows:
-    runs-on: windows-2019
-    steps:
-    - uses: actions/checkout@master
-    - name: Test
-      run: |
-        mkdir build
-        cd build
-        cmake -Dtermcolor2_BUILD_TEST=ON ..
-        cmake --build .
         ctest --output-on-failure --verbose
