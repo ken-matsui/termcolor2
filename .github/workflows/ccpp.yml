@@ -8,10 +8,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-18.04, macOS-10.14]
+        os: [macOS-10.14, ubuntu-18.04]
 
     steps:
     - uses: actions/checkout@master
+    
+    - name: Install Boost (only macOS)
+      run: brew install boost
+      if: matrix.os == 'macOS-10.14'
+
     - name: basic example (C++11)
       run: |
         g++ -std=c++11 -I./include examples/basic.cpp -o basic11
