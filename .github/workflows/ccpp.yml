@@ -42,5 +42,5 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake ..
+        cmake -DBOOST_INCLUDEDIR=/usr/local/share/boost/1.69.0/include ..
         ctest --output-on-failure --verbose
