@@ -9,7 +9,7 @@ endif ()
 
 cmake_minimum_required(VERSION 3.0)
 project(termcolor2 LANGUAGES CXX)
-option(termcolor2_BUILD_TEST "Build poac tests" ON)
+option(termcolor2_BUILD_TEST "Build termcolor2 tests" ON)
 
 if (termcolor2_BUILD_TEST)
     enable_testing()
