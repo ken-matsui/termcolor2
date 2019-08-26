@@ -42,5 +42,5 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake -DBoost_DEBUG=ON ..
+        cmake -DBoost_DEBUG=ON -DBOOST_INCLUDEDIR=/usr/local/share/boost/1.69.0 ..
         ctest --output-on-failure --verbose
