@@ -5,7 +5,6 @@
 #include <ostream> // std::basic_ostream
 #include <iterator> // std::ostreambuf_iterator
 #include <ios> // std::ios_base
-
 #include <termcolor2/string.hpp>
 
 namespace termcolor2 {
