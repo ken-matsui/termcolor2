@@ -42,5 +42,5 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake ..
+        cmake -Dpoac_BUILD_TEST ..
         ctest --output-on-failure --verbose
