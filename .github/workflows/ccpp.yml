@@ -43,5 +43,5 @@ jobs:
         ls /usr/local/share/boost/1.69.0/include
         mkdir build
         cd build
-        cmake -DBOOST_ROOT=/usr/local/share/boost/1.69.0 -DBoost_INCLUDE_DIR=/usr/local/share/boost/1.69.0/include ..
+        cmake -DBoost_DEBUG=ON ..
         ctest --output-on-failure --verbose
