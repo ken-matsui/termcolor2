@@ -15,7 +15,7 @@ jobs:
     
     - name: Install Boost (only macOS)
       run: brew install boost
-      if: matrix.os == 'macOS-10.14'
+      if: matrix.os == 'macOS*'
 
     - name: basic example (C++11)
       run: |
@@ -29,7 +29,7 @@ jobs:
       run: |
         g++ -std=c++17 -I./include examples/basic.cpp -o basic17
         ./basic17
-        
+
     - name: constant expression example (C++11)
       run: |
         g++ -std=c++11 -I./include examples/constant.cpp -o constant11
