@@ -3,13 +3,18 @@ name: C/C++ CI
 on: [push, pull_request]
 
 jobs:
-  build-on-macos:
-    runs-on: macOS-10.14
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, macOS-10.14]
+
     steps:
     - uses: actions/checkout@master
     
     - name: Install Boost
       run: brew install boost
+      if: startsWith(matrix.os, 'macOS')
 
     - name: basic example (C++11)
       run: |
@@ -38,6 +43,7 @@ jobs:
         ./constant17
 
     - name: Test
+      if: startsWith(matrix.os, 'macOS')
       run: |
         mkdir build
         cd build
