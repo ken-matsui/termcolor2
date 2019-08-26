@@ -3,48 +3,36 @@ name: C/C++ CI
 on: [push, pull_request]
 
 jobs:
-  build:
-
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macOS-10.14, windows-2019]
-
+  build-on-macos:
+    runs-on: macOS-10.14
     steps:
     - uses: actions/checkout@master
     
     - name: Install Boost (only macOS)
       run: brew install boost
-      if: startsWith(matrix.os, 'macOS')
 
     - name: basic example (C++11)
-      if: startsWith(matrix.os, 'macOS')
       run: |
         g++ -std=c++11 -I./include examples/basic.cpp -o basic11
         ./basic11
     - name: basic example (C++14)
-      if: startsWith(matrix.os, 'macOS')
       run: |
         g++ -std=c++14 -I./include examples/basic.cpp -o basic14
         ./basic14
     - name: basic example (C++17)
-      if: startsWith(matrix.os, 'macOS')
       run: |
         g++ -std=c++17 -I./include examples/basic.cpp -o basic17
         ./basic17
 
     - name: constant expression example (C++11)
-      if: startsWith(matrix.os, 'macOS')
       run: |
         g++ -std=c++11 -I./include examples/constant.cpp -o constant11
         ./constant11
     - name: constant expression example (C++14)
-      if: startsWith(matrix.os, 'macOS')
       run: |
         g++ -std=c++14 -I./include examples/constant.cpp -o constant14
         ./constant14
     - name: constant expression example (C++17)
-      if: startsWith(matrix.os, 'macOS')
       run: |
         g++ -std=c++17 -I./include examples/constant.cpp -o constant17
         ./constant17
@@ -55,4 +43,16 @@ jobs:
         cd build
         cmake -Dtermcolor2_BUILD_TEST=ON ..
         make
+        ctest --output-on-failure --verbose
+        
+  build-on-windows:
+    runs-on: windows-2019
+    steps:
+    - uses: actions/checkout@master
+    - name: Test
+      run: |
+        mkdir build
+        cd build
+        cmake -Dtermcolor2_BUILD_TEST=ON ..
+        cmake --build .
         ctest --output-on-failure --verbose
