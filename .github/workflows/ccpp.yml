@@ -43,4 +43,5 @@ jobs:
         mkdir build
         cd build
         cmake -Dtermcolor2_BUILD_TEST=ON ..
+        make
         ctest --output-on-failure --verbose
