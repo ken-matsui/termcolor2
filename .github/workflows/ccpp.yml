@@ -37,10 +37,10 @@ jobs:
       run: |
         g++ -std=c++17 -I./include examples/constant.cpp -o constant17
         ./constant17
-        
+
     - name: Test
       run: |
         mkdir build
         cd build
-        cmake -DBOOST_INCLUDEDIR=/usr/local/share/boost/1.69.0/include ..
+        cmake -DBOOST_ROOT=/usr/local/share/boost/1.69.0 ..
         ctest --output-on-failure --verbose
