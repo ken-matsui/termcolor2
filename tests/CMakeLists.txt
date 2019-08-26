@@ -10,7 +10,7 @@ set(TEST_NAMES
         to_color
 )
 
-find_package(Boost REQUIRED COMPONENTS unit_test_framework)
+find_package(Boost REQUIRED)
 
 foreach (TEST_NAME ${TEST_NAMES})
     add_executable(${TEST_NAME} ${TEST_NAME}.cpp)
