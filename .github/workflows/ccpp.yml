@@ -40,7 +40,6 @@ jobs:
 
     - name: Test
       run: |
-        ls /usr/local/share/boost/1.69.0/include
         mkdir build
         cd build
         cmake -DBoost_DEBUG=ON ..
