@@ -8,9 +8,6 @@ matrix:
     # macOS High Sierra
     - os: osx
       osx_image: xcode10.1
-    # macOS Mojave
-    - os: osx
-      osx_image: xcode10.2
 
 script:
   - clang++ -std=c++14 -I./include examples/basic.cpp -o basic14 && ./basic14
