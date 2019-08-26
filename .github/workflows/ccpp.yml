@@ -15,7 +15,7 @@ jobs:
     
     - name: Install Boost (only macOS)
       run: brew install boost
-      if: matrix.os == 'macOS*'
+      if: startsWith(matrix.os, 'macOS')
 
     - name: basic example (C++11)
       run: |
