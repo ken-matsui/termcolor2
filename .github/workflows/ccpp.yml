@@ -12,6 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - name: basic example (C++11)
+      run: |
+        g++ -std=c++11 -I./include examples/basic.cpp -o basic11
+        ./basic11
     - name: basic example (C++14)
       run: |
         g++ -std=c++14 -I./include examples/basic.cpp -o basic14
@@ -20,6 +24,11 @@ jobs:
       run: |
         g++ -std=c++17 -I./include examples/basic.cpp -o basic17
         ./basic17
+        
+    - name: constant expression example (C++11)
+      run: |
+        g++ -std=c++11 -I./include examples/constant.cpp -o constant11
+        ./constant11
     - name: constant expression example (C++14)
       run: |
         g++ -std=c++14 -I./include examples/constant.cpp -o constant14
