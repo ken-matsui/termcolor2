@@ -10,7 +10,7 @@ set(TEST_NAMES
         to_color
 )
 
-find_package(Boost REQUIRED)
+#find_package(Boost REQUIRED)
 
 foreach (TEST_NAME ${TEST_NAMES})
     add_executable(${TEST_NAME} ${TEST_NAME}.cpp)
@@ -19,6 +19,6 @@ foreach (TEST_NAME ${TEST_NAMES})
     if (CMAKE_BUILD_TYPE STREQUAL Coverage)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 -fprofile-arcs -ftest-coverage")
     endif()
-    target_include_directories(${TEST_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include ${Boost_INCLUDE_DIRS})
+    target_include_directories(${TEST_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include /usr/local/share/boost/1.69.0/include)
     add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME} WORKING_DIRECTORY ${PROJECT_BINARY_DIR})
 endforeach ()
