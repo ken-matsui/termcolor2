@@ -40,6 +40,7 @@ jobs:
 
     - name: Test
       run: |
+        ls /usr/local/share/boost/1.69.0/include/boost
         mkdir build
         cd build
         cmake -DBOOST_ROOT=/usr/local/share/boost/1.69.0 -DBoost_INCLUDE_DIR=/usr/local/share/boost/1.69.0/include ..
