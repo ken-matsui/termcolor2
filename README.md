@@ -1,7 +1,7 @@
 # termcolor2 [![Build Status](https://travis-ci.com/matken11235/termcolor2.svg?branch=master)](https://travis-ci.com/matken11235/termcolor2)
 Termcolor2 is a header-only constexpr cross-platform C++ library for terminal colors.
 
-Support not less than C++14.
+Support C++11 or later versions.
 
 ## Installation
 
